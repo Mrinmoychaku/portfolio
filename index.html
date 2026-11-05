@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mrinmoy Chaku - B.Tech Computer Science Student & Junior Web Developer based in West Bengal, India. Specialized in Python, JavaScript, and database-driven web applications.">
+  <meta name="keywords" content="Mrinmoy Chaku, Web Developer, B.Tech CSE, Python Developer, JavaScript, Frontend, Backend, Hooghly, Kolkata">
+  <meta name="author" content="Mrinmoy Chaku">
+  <title>Mrinmoy Chaku | Web Developer & CS Student</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ============================================================
+       Navigation Bar
+       ============================================================ -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">&lt;MC /&gt;</div>
+        <span>Mrinmoy<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun" title="Switch to Light Mode"></i>
+        </button>
+        <a href="#contact" class="nav-cta">
+          <i class="fa-solid fa-paper-plane"></i> Hire Me
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       Hero Section
+       ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Available for Internship & Full-time Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <br>
+            <span class="gradient-text">Mrinmoy Chaku</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span>I am a </span>
+            <span id="typing-text" class="typing-text"></span>
+            <span class="cursor"></span>
+          </div>
+
+          <p class="hero-description">
+            Motivated B.Tech Computer Science student with hands-on experience in web development, database-driven systems, and clean code architecture. Contributed to real-time competition platforms, reliable backend logic, and responsive user experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i> Explore Projects
+            </a>
+            <a href="#" id="open-resume-modal" class="btn btn-outline">
+              <i class="fa-solid fa-file-invoice"></i> View Resume
+            </a>
+            <a href="assets/Mrinmoy_Chaku_Resume.docx" download="Mrinmoy_Chaku_Resume.docx" class="btn btn-outline" title="Download Word Resume">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-links-list">
+              <a href="mailto:mrinmoychaku@gmail.com" class="social-icon-btn" title="Email Mrinmoy">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+916297698886" class="social-icon-btn" title="Call Mrinmoy">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+              <a href="https://wa.me/916297698886" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp Chat">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual-wrapper">
+          <div class="avatar-glow-ring"></div>
+          
+          <div class="avatar-container">
+            <img src="assets/profile.jpg" alt="Mrinmoy Chaku Profile Photo" class="avatar-img">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-python">
+            <i class="fa-brands fa-python"></i> Python
+          </div>
+          <div class="floating-badge badge-js">
+            <i class="fa-brands fa-js"></i> JavaScript
+          </div>
+          <div class="floating-badge badge-database">
+            <i class="fa-solid fa-database"></i> SQL / DBs
+          </div>
+          <div class="floating-badge badge-experience">
+            <i class="fa-solid fa-briefcase"></i> Junior Developer
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       About Section
+       ============================================================ */
+  -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-user"></i> About Me</span>
+        <h2 class="section-title">Passionate About Building <span class="gradient-text">Impactful Web Apps</span></h2>
+        <p class="section-subtitle">A blend of academic foundations in Computer Science and hands-on industry experience building real-world web applications.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hello! I'm <strong>Mrinmoy Chaku</strong>, a B.Tech Computer Science student at <strong>Dr. Sudhir Chandra Sur Institute of Technology (SurTech)</strong>, Kolkata, and a practicing <strong>Junior Developer</strong> since June 2024.
+          </p>
+          <p>
+            My core expertise lies in developing clean, maintainable code for full-stack features using <strong>Python, JavaScript, HTML5, CSS3</strong>, and relational databases like <strong>MySQL and PostgreSQL</strong>.
+          </p>
+          <p>
+            I have contributed directly to high-stakes, real-time production software — most notably the <strong>Yoga Scoring System (YSS)</strong>, a live competition judging platform where judges submit marks from their smartphones with automated trimmed-mean scoring and instant leaderboard broadcasts.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature-item">
+              <i class="fa-solid fa-check-double"></i>
+              <div>
+                <strong>Clean & Maintainable Code</strong>
+                <span>Well-structured, documented architecture</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-bug-slash"></i>
+              <div>
+                <strong>Debugging & Testing</strong>
+                <span>Rapid resolution of runtime defects</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <div>
+                <strong>Responsive Design</strong>
+                <span>Pixel-perfect across mobile, tablet & desktop</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <i class="fa-solid fa-bolt"></i>
+              <div>
+                <strong>Fast Learner & Team Player</strong>
+                <span>Thrives in agile collaborative environments</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="languages-box">
+            <div class="languages-label">
+              <i class="fa-solid fa-language"></i> Spoken Languages:
+            </div>
+            <div class="language-tags">
+              <span class="lang-tag"><i class="fa-solid fa-comment"></i> English (Professional)</span>
+              <span class="lang-tag"><i class="fa-solid fa-comment"></i> Bengali / বাংলা (Native)</span>
+              <span class="lang-tag"><i class="fa-solid fa-comment"></i> Hindi / हिंदी (Conversational)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="stat-number">B.Tech CSE</div>
+            <div class="stat-title">SurTech, Kolkata (Currently Enrolled)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="stat-number">June 2024+</div>
+            <div class="stat-title">Junior Developer Experience</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-number">Production System</div>
+            <div class="stat-title">Yoga Scoring System (YSS)</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="stat-number">Hooghly / Kolkata</div>
+            <div class="stat-title">West Bengal, India</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Skills Section
+       ============================================================ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-layer-group"></i> Expertise</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills & Arsenal</span></h2>
+        <p class="section-subtitle">Proficiencies in modern web development, backend logic, relational database engineering, and software engineering principles.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="languages">Programming Languages</button>
+        <button class="filter-btn" data-filter="web">Web Technologies</button>
+        <button class="filter-btn" data-filter="databases">Databases</button>
+        <button class="filter-btn" data-filter="concepts">Core Concepts</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid">
+        <!-- Python -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-python"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-meta">
+              <h4>Python</h4>
+              <span>Language</span>
+            </div>
+          </div>
+          <p class="skill-desc">Object-oriented programming, algorithmic score calculations, script automation, backend integrations, and data handling.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Advanced</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-js"><i class="fa-brands fa-js"></i></div>
+            <div class="skill-meta">
+              <h4>JavaScript (ES6+)</h4>
+              <span>Language</span>
+            </div>
+          </div>
+          <p class="skill-desc">Dynamic DOM manipulation, event handling, asynchronous operations, interactive user interfaces, and client-side logic.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Proficient</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+          </div>
+        </div>
+
+        <!-- HTML5 -->
+        <div class="skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-html"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-meta">
+              <h4>HTML5</h4>
+              <span>Web Technology</span>
+            </div>
+          </div>
+          <p class="skill-desc">Semantic document markup, accessibility standards, SEO-friendly layout structure, form validations, and multimedia embeds.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Expert</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+          </div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-css"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-meta">
+              <h4>CSS3 & Responsive Design</h4>
+              <span>Web Technology</span>
+            </div>
+          </div>
+          <p class="skill-desc">Flexbox, CSS Grid layouts, glassmorphism, responsive media queries, CSS variables, transitions, and keyframe animations.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Expert</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+          </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="skill-card" data-category="databases">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-mysql"><i class="fa-solid fa-database"></i></div>
+            <div class="skill-meta">
+              <h4>MySQL</h4>
+              <span>Relational Database</span>
+            </div>
+          </div>
+          <p class="skill-desc">Relational schema design, normalization, complex joins, primary & foreign keys, indexing, and persistent state storage.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Proficient</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 82%;"></div></div>
+          </div>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="skill-card" data-category="databases">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-postgres"><i class="fa-solid fa-server"></i></div>
+            <div class="skill-meta">
+              <h4>PostgreSQL</h4>
+              <span>Relational Database</span>
+            </div>
+          </div>
+          <p class="skill-desc">ACID transaction management, enterprise SQL queries, relational integrity, data migrations, and scalable record storage.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Proficient</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+          </div>
+        </div>
+
+        <!-- REST APIs -->
+        <div class="skill-card" data-category="web">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-api"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="skill-meta">
+              <h4>REST APIs</h4>
+              <span>Web Technology</span>
+            </div>
+          </div>
+          <p class="skill-desc">Client-server architecture, JSON data serialization, HTTP verbs (GET, POST, PUT, DELETE), endpoints, and asynchronous fetch requests.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Proficient</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 84%;"></div></div>
+          </div>
+        </div>
+
+        <!-- OOP & Testing -->
+        <div class="skill-card" data-category="concepts">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap icon-oop"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-meta">
+              <h4>OOP & Debugging</h4>
+              <span>Core Concepts</span>
+            </div>
+          </div>
+          <p class="skill-desc">Object-Oriented Programming principles, modular code architecture, runtime defect resolution, unit testing, and Git version control.</p>
+          <div class="skill-bar-wrapper">
+            <div class="skill-bar-header"><span>Proficiency</span><span>Advanced</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 87%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Featured Projects Section
+       ============================================================ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-code-fork"></i> Portfolio Showcase</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Project Spotlight</span></h2>
+        <p class="section-subtitle">Real-world production applications engineered for high reliability, live multi-user concurrency, and intuitive UI/UX.</p>
+      </div>
+
+      <!-- Flagship Project Card: Yoga Scoring System (YSS) -->
+      <div class="featured-project-card">
+        <div class="featured-project-grid">
+          <div class="project-content">
+            <span class="project-tag"><i class="fa-solid fa-star"></i> Flagship Production Platform</span>
+            <h3 class="project-title">Yoga Scoring System (YSS)</h3>
+            <p class="project-summary">
+              A comprehensive real-time web-based judging and scoring platform built for competitive yoga tournaments. Enables a panel of judges to evaluate competitors seamlessly from smartphones while broadcasting instant, unbiased scores to screens and audiences.
+            </p>
+
+            <ul class="project-highlights">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Real-Time Smartphone Judging:</strong> Judges log into private responsive portals on their phones to submit scores for each asana as competitors perform.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Automated Trimmed-Average Algorithm:</strong> Eliminates bias by automatically discarding the highest and lowest scores given for each asana, computing the fair cumulative total instantly.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Live Leaderboard & Projection Display:</strong> Audience and participants view scores, standings, and rank updates live on large screens without delay.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Full-Stack Architecture:</strong> Built using Python, HTML5, CSS3, JavaScript, and relational database management to ensure flawless runtime stability.</span>
+              </li>
+            </ul>
+
+            <div class="tech-tags">
+              <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-tag"><i class="fa-solid fa-database"></i> Relational Database</span>
+              <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="tech-tag"><i class="fa-solid fa-bolt"></i> Real-Time Logic</span>
+            </div>
+
+            <div class="project-actions">
+              <button id="open-yss-modal" class="btn btn-primary">
+                <i class="fa-solid fa-calculator"></i> Try Live Scoring Simulator
+              </button>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-comments"></i> Inquire About Architecture
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Visual / Interactive Mockup -->
+          <div class="project-visual-pane">
+            <div class="mockup-window">
+              <div class="mockup-header">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+                <span class="mockup-title">yss_scoring_engine.py — Active Tournament</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-stat-row">
+                  <span>Participant: <strong>Aarav Sharma (#104)</strong></span>
+                  <span class="mockup-badge badge-live">● LIVE ON MAT</span>
+                </div>
+                <div class="mockup-stat-row">
+                  <span>Asana: <strong>Mayurasana (Peacock Pose)</strong></span>
+                  <span class="mockup-badge badge-calc">Difficulty: 9.5</span>
+                </div>
+                <div class="mockup-stat-row">
+                  <span>Judge Panel Status:</span>
+                  <span style="color: var(--accent-green); font-weight: 600;">5/5 Marks Submitted</span>
+                </div>
+
+                <div class="algorithm-preview">
+# Automated Trimmed Scoring Logic
+def compute_asana_score(judge_scores):
+    scores = sorted(judge_scores)
+    dropped_min = scores.pop(0)  # Dropped low
+    dropped_max = scores.pop(-1) # Dropped high
+    net_total = sum(scores)
+    return {
+        "net_score": net_total,
+        "trimmed": [dropped_min, dropped_max]
+    }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Notable Projects Grid -->
+      <div class="other-projects-grid">
+        <div class="sub-project-card">
+          <div class="sub-project-header">
+            <i class="fa-solid fa-folder-open folder-icon"></i>
+            <span class="tech-tag">Web App</span>
+          </div>
+          <h3>Student & Academic Portal</h3>
+          <p>
+            A responsive web application designed for students and faculties to manage academic schedules, task tracking, and records backed by a relational database schema.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="sub-project-card">
+          <div class="sub-project-header">
+            <i class="fa-solid fa-folder-open folder-icon"></i>
+            <span class="tech-tag">Portfolio</span>
+          </div>
+          <h3>Developer Portfolio & Interactive UI</h3>
+          <p>
+            Modern developer portfolio featuring glassmorphism, responsive navigation, dynamic canvas constellation background, theme toggle, and an embedded scoring simulator.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Vanilla JS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Work Experience & Education Timeline
+       ============================================================ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="experience-education-grid">
+        <!-- Work Experience Column -->
+        <div>
+          <div class="column-header">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Work Experience</span>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">June 2024 – Present</span>
+                <h3 class="timeline-title">Junior Developer</h3>
+                <div class="timeline-org">
+                  <i class="fa-solid fa-building"></i> Software Development Team | Kolkata, India
+                </div>
+                <div class="timeline-desc">
+                  Working actively on commercial application features, stability, and runtime optimization.
+                  <ul class="timeline-list">
+                    <li>Developed clean, maintainable, and modular code for assigned web application features.</li>
+                    <li>Debugged runtime issues and resolved defects across local and staging environments.</li>
+                    <li>Conducted comprehensive testing to verify software performance, responsiveness, and stability.</li>
+                    <li>Collaborated with team leads and cross-functional members to deliver features matching client requirements.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div id="education">
+          <div class="column-header">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+          </div>
+
+          <div class="timeline">
+            <!-- B.Tech -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Currently Enrolled</span>
+                <h3 class="timeline-title">Bachelor of Technology (B.Tech) in Computer Science</h3>
+                <div class="timeline-org">
+                  <i class="fa-solid fa-university"></i> Dr. Sudhir Chandra Sur Institute of Technology & Sports Complex (SurTech)
+                </div>
+                <p class="timeline-desc">
+                  Kolkata, India. Rigorous academic curriculum in Computer Science & Engineering covering Object-Oriented Programming, Database Management Systems, Data Structures & Algorithms, and Modern Web Architectures.
+                </p>
+              </div>
+            </div>
+
+            <!-- Higher Secondary -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Completed</span>
+                <h3 class="timeline-title">High School Diploma (H.S.)</h3>
+                <div class="timeline-org">
+                  <i class="fa-solid fa-school"></i> Guti Uday Chand Vidyamandir (H.S)
+                </div>
+                <p class="timeline-desc">
+                  Hooghly, West Bengal, India. Completed secondary and higher secondary education with strong foundations in Science and Mathematics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Contact Section
+       ============================================================ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Connect & <span class="gradient-text">Build Together</span></h2>
+        <p class="section-subtitle">Have a project, internship opportunity, or question? Feel free to reach out directly or send a message below.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards -->
+        <div class="contact-info-cards">
+          <!-- Email Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-card-details">
+              <h4>Email Address</h4>
+              <a href="mailto:mrinmoychaku@gmail.com">mrinmoychaku@gmail.com</a>
+            </div>
+            <button class="copy-btn" data-copy="mrinmoychaku@gmail.com" title="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-card-details">
+              <h4>Phone Number</h4>
+              <a href="tel:+916297698886">+91 6297698886</a>
+            </div>
+            <button class="copy-btn" data-copy="+916297698886" title="Copy Phone Number">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- WhatsApp Quick Chat -->
+          <div class="contact-card whatsapp-card">
+            <div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="contact-card-details">
+              <h4>Direct WhatsApp</h4>
+              <a href="https://wa.me/916297698886" target="_blank" rel="noopener noreferrer">Chat on WhatsApp (+91 6297698886)</a>
+            </div>
+            <a href="https://wa.me/916297698886" target="_blank" rel="noopener noreferrer" class="copy-btn" title="Open WhatsApp Chat">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <!-- Location Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-card-details">
+              <h4>Location</h4>
+              <span>Hooghly, West Bengal, India - 712408</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-wrapper">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Rahul Sen" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. rahul@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" class="form-control" placeholder="e.g. Job Opportunity / Collaboration">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message *</label>
+              <textarea id="contact-message" class="form-control" placeholder="Hi Mrinmoy, I came across your portfolio and would love to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Mrinmoy Chaku</h3>
+          <p>B.Tech Computer Science Student & Junior Web Developer | Hooghly, India</p>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Mrinmoy Chaku. All Rights Reserved.</span>
+        <span>Crafted with HTML5, CSS3 & JavaScript</span>
+        <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       Interactive Simulator Modal (Yoga Scoring System)
+       ============================================================ -->
+  <div id="yss-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-title" style="display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-calculator" style="color: var(--accent-cyan);"></i>
+          YSS Real-Time Scoring Algorithm Simulator
+        </h3>
+        <button id="close-yss-modal" class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="sim-intro">
+          <strong>How It Works:</strong> 5 judges independently score each asana on a scale of 0.0 to 10.0. To eliminate judging bias, the algorithm automatically <strong>drops the highest score and the lowest score</strong>. The remaining 3 scores are summed and averaged to calculate the final official score.
+        </div>
+
+        <h4 style="margin-bottom: 0.75rem; font-size: 0.95rem;">Enter Judge Marks (0.0 - 10.0):</h4>
+        <div class="sim-form-grid">
+          <div class="sim-judge-input">
+            <label for="judge1">Judge 1</label>
+            <input type="number" id="judge1" step="0.1" min="0" max="10" value="9.4">
+          </div>
+          <div class="sim-judge-input">
+            <label for="judge2">Judge 2</label>
+            <input type="number" id="judge2" step="0.1" min="0" max="10" value="8.8">
+          </div>
+          <div class="sim-judge-input">
+            <label for="judge3">Judge 3</label>
+            <input type="number" id="judge3" step="0.1" min="0" max="10" value="9.6">
+          </div>
+          <div class="sim-judge-input">
+            <label for="judge4">Judge 4</label>
+            <input type="number" id="judge4" step="0.1" min="0" max="10" value="7.5">
+          </div>
+          <div class="sim-judge-input">
+            <label for="judge5">Judge 5</label>
+            <input type="number" id="judge5" step="0.1" min="0" max="10" value="9.1">
+          </div>
+        </div>
+
+        <div class="sim-actions">
+          <button id="sim-calc-btn" class="btn btn-primary">
+            <i class="fa-solid fa-calculator"></i> Calculate Net Score
+          </button>
+          <button id="sim-random-btn" class="btn btn-outline">
+            <i class="fa-solid fa-shuffle"></i> Randomize Scores
+          </button>
+        </div>
+
+        <div class="sim-results-card">
+          <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Calculation Breakdown:</h4>
+          <div id="sim-chips" class="sim-score-breakdown">
+            <!-- Dynamically populated chips -->
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+            <div>
+              <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">COUNTED AVERAGE (3 JUDGES)</span>
+              <div id="sim-final-avg-val" style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">0.00</div>
+            </div>
+            <div style="text-align: right;">
+              <span style="color: var(--text-muted); font-size: 0.85rem; font-weight: 600;">FINAL OFFICIAL SCORE (TOTAL)</span>
+              <div id="sim-final-score-val" class="sim-final-score">0.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Resume Modal & Print Preview
+       ============================================================ -->
+  <div id="resume-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+    <div class="modal-container resume-modal-container">
+      <div class="modal-header">
+        <h3 id="resume-title" style="display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-file-lines" style="color: var(--accent-cyan);"></i>
+          Curriculum Vitae Preview
+        </h3>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button id="print-resume-btn" class="btn btn-primary" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+            <i class="fa-solid fa-print"></i> Print / Save as PDF
+          </button>
+          <a href="assets/Mrinmoy_Chaku_Resume.docx" download="Mrinmoy_Chaku_Resume.docx" class="btn btn-outline" style="padding: 0.45rem 1rem; font-size: 0.85rem;">
+            <i class="fa-solid fa-download"></i> Download .docx
+          </a>
+          <button id="close-resume-modal" class="modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-paper">
+          <h1>Mrinmoy Chaku</h1>
+          <div class="res-header-info">
+            <strong>B.Tech Computer Science Student | Aspiring Web Developer</strong><br>
+            Hooghly, West Bengal, India 712408 &nbsp;|&nbsp; +91 6297698886 &nbsp;|&nbsp; mrinmoychaku@gmail.com
+          </div>
+
+          <h2>Professional Summary</h2>
+          <p>
+            Motivated B.Tech Computer Science student with hands-on experience in web development and database-driven applications. Skilled in Python, HTML, CSS, and JavaScript, with a working knowledge of relational databases, and has contributed to a real-time yoga competition scoring platform. Experienced in building clean, maintainable code, debugging runtime issues, and delivering features that meet user requirements. A fast learner with strong problem-solving skills and a genuine passion for building responsive, user-friendly web applications.
+          </p>
+
+          <h2>Technical Skills</h2>
+          <p><strong>Programming Languages:</strong> Python, JavaScript</p>
+          <p><strong>Web Technologies:</strong> HTML5, CSS3, Responsive Web Design, REST APIs</p>
+          <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
+          <p><strong>Concepts:</strong> Object-Oriented Programming, Debugging and Testing, Front-end and Back-end Development</p>
+
+          <h2>Projects</h2>
+          <p><strong>Yoga Scoring System (YSS) – Real-Time Web-Based Judging and Scoring Platform</strong></p>
+          <ul>
+            <li>Worked on a web-based platform for yoga competitions that collects marks from judges in real time through their smartphones.</li>
+            <li>Contributed to the scoring logic that removes the highest and lowest marks for each asana and totals the rest automatically.</li>
+            <li>Supported live on-screen score display, judge login accounts, and result sheets, so participants and audiences can see marks instantly.</li>
+            <li>Used Python, HTML, CSS, JavaScript, and a database to build, test, and debug features for stable, reliable performance.</li>
+          </ul>
+
+          <h2>Work Experience</h2>
+          <p><strong>Junior Developer – Kolkata, India</strong> | June 2024 – Present</p>
+          <ul>
+            <li>Developed clean, maintainable code for assigned application features.</li>
+            <li>Debugged runtime issues and resolved defects across development environments.</li>
+            <li>Tested software functionality to verify performance and stability.</li>
+            <li>Collaborated with team members to implement user requirements accurately.</li>
+          </ul>
+
+          <h2>Education</h2>
+          <p><strong>Bachelor of Technology (B.Tech) in Computer Science – Currently Enrolled</strong></p>
+          <p>Dr. Sudhir Chandra Sur Institute of Technology & Sports Complex (SurTech), Kolkata, India</p>
+          <br>
+          <p><strong>High School Diploma (H.S.)</strong></p>
+          <p>Guti Uday Chand Vidyamandir (H.S), Hooghly, India</p>
+
+          <h2>Languages</h2>
+          <p>English &nbsp;|&nbsp; Bengali &nbsp;|&nbsp; Hindi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
