@@ -7,12 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initTypingEffect();
   initCanvasBackground();
+  initCodeTerminalTilt();
   initNavigation();
   initSkillsFilter();
   initYssSimulator();
   initModals();
   initContactFeatures();
 });
+
+/* ============================================================
+   0. Interactive 3D Tilt for Code Terminal Card
+   ============================================================ */
+function initCodeTerminalTilt() {
+  const terminal = document.getElementById('code-terminal');
+  if (!terminal) return;
+
+  terminal.addEventListener('mousemove', (e) => {
+    const rect = terminal.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -9;
+    const rotateY = ((x - centerX) / centerX) * 9;
+
+    terminal.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
+  });
+
+  terminal.addEventListener('mouseleave', () => {
+    terminal.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+  });
+}
 
 /* ============================================================
    1. Theme Toggle (Dark / Light)
